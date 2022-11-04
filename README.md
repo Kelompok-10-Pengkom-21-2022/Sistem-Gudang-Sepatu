@@ -1,4 +1,4 @@
-# Tugas Besar Pengenalan Komputasi Kelompok 10
+# Tugas Besar 1 Pengenalan Komputasi Kelompok 10
 
 ## Topik: Sistem Gudang Sepatu
 
