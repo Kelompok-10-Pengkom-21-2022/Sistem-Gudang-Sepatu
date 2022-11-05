@@ -1,3 +1,4 @@
+# ======================================  FUNCTION ======================================
 import os
 import time
 import itertools
@@ -26,6 +27,11 @@ def _inputInt(prompt, inputType, allowed):
                     true = True
                 else:
                     print("                             Size not available. 😞")
+            elif inputType == "buyQ":
+                if _input <= allowed:
+                    true = True
+                else:
+                    print(f"                             Sorry, stock are just {allowed}. 😞")
             else:
                 true = True
         else:
@@ -249,7 +255,7 @@ def buy():
     print()
     idx = int(_inputStr("Code", "buyCode"))
     size = _inputInt("Size", "size", 0)
-    pair = _inputInt("Quantity", '', 0)
+    pair = _inputInt("Quantity", "buyQ", shoes[0][idx][size-39])
     # update
     shoes[0][idx][size-39] -= pair
     print()
@@ -287,8 +293,8 @@ def add(ty):
         idx = int(_inputStr("Code", "addStockCode"))
         size = _inputInt("Size", "size", 0)
         addStock = _inputInt("Quantity", '', 0)
+        # update
         shoes[0][idx][size - 39] += addStock
-    # update
     loading()
     writeFile()
     print()
